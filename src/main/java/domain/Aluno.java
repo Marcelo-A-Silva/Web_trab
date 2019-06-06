@@ -17,5 +17,5 @@ public class Aluno implements Serializable {
 	
 	private String nome;
 	
-	private String nota[];
+	private String nota;
 }
