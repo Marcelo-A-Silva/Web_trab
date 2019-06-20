@@ -5,31 +5,30 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import domain.Professor;
-import repositories.ProfessorRepository;
-
+import domain.Disciplina;
+import repositories.DisciplinaRepository;
 
 @Service
-public class ProfessorService {
-	
+public class DisciplinaService {
+
 	@Autowired
-	private ProfessorRepository repo;
+	private DisciplinaRepository repo;
 	
 	//BUSCAR POR ID
-	public Professor find (Integer id) {
-		Optional<Professor> obj = repo.findById(id);
+	public Disciplina find (Integer id) {
+		Optional<Disciplina> obj = repo.findById(id);
 		return obj.orElse(null);
 	}
 	
 	//INSERIR
-	public Professor insert (Professor obj) {
+	public Disciplina insert (Disciplina obj) {
 		obj.setId(null);
 		return repo.save(obj);
 	}
 	
 	//ATUALIZA
-	public Professor update(Professor obj) {
-		Professor newObj = find(obj.getId());
+	public Disciplina update(Disciplina obj) {
+		Disciplina newObj = find(obj.getId());
 		updateData(newObj, obj);
 		return repo.save(newObj);
 	}
@@ -41,11 +40,9 @@ public class ProfessorService {
 		repo.deleteById(id);
 	}
 	
-	
-	private void updateData(Professor newObj, Professor obj) {
+	private void updateData(Disciplina newObj, Disciplina obj) {
 		newObj.setNome	(obj.getNome());
-		newObj.setSexo	(obj.getSexo());
-		newObj.setIdade	(obj.getIdade());
-		
 	}
+	
+	
 }

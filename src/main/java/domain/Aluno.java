@@ -18,4 +18,40 @@ public class Aluno implements Serializable {
 	private String nome;
 	
 	private String nota;
+	
+	
+	public Aluno() {
+		
+	}
+	
+	public Aluno(Integer id, String nome, String nota) {
+		this.id = id;
+		this.nome = nome;
+		this.nota = nota;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getNota() {
+		return nota;
+	}
+
+	public void setNota(String nota) {
+		this.nota = nota;
+	}
+	
 }

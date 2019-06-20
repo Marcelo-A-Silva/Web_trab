@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import domain.Professor;
+import services.ProfessorService;
 
 @RestController
 @RequestMapping(value="/categorias")
