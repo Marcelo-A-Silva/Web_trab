@@ -11,7 +11,7 @@ import domain.Professor;
 import services.ProfessorService;
 
 @RestController
-@RequestMapping(value="/categorias")
+@RequestMapping(value="/professores")
 public class ProfessorResource {
 	
 	@Autowired

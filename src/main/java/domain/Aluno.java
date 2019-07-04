@@ -17,14 +17,14 @@ public class Aluno implements Serializable {
 	
 	private String nome;
 	
-	private String nota;
+	private Double nota;
 	
 	
 	public Aluno() {
 		
 	}
 	
-	public Aluno(Integer id, String nome, String nota) {
+	public Aluno(Integer id, String nome, Double nota) {
 		this.id = id;
 		this.nome = nome;
 		this.nota = nota;
@@ -46,11 +46,11 @@ public class Aluno implements Serializable {
 		this.nome = nome;
 	}
 
-	public String getNota() {
+	public Double getNota() {
 		return nota;
 	}
 
-	public void setNota(String nota) {
+	public void setNota(Double nota) {
 		this.nota = nota;
 	}
 	
